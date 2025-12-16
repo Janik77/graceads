@@ -1,0 +1,76 @@
+{% extends 'base_body.html' %}
+{% load humanize %}
+
+{% block body %}
+
+<span style="display: none" id="page_title">Store</span>
+<button style="display: none" onclick="store_page_loaded()" id="page_loaded_js_function"></button>
+
+
+<div class="block store_page">
+    <div class="container products_info">
+        <details class="filter_details open_details" data-open="true" open>
+            <summary><span>Фильтр</span><img src="/static/imgs/details.png" alt=""></summary>
+
+            <div class="content">
+                <hr>
+
+                <div class="category">
+                    <b>Категория</b>
+
+                    <select v-model="category" onchange="open_category()" id="category_select">
+                        {% for category in categories %}
+                        <option value="{{ category }}"{% if category == selected_category %} selected{% endif %}>{{ category }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="order_by">
+                    <b>Сортировка по</b>
+
+                    <select v-model="ordering" onchange="get_products()" id="ordering_select">
+                        <option value="-id"{% if selected_ordering == "-id" %} selected{% endif %}>Новинка</option>
+                        <option value="-price"{% if selected_ordering == "-price" %} selected{% endif %}>Цена по убыванию</option>
+                        <option value="price"{% if selected_ordering == "price" %} selected{% endif %}>Цена по возрастанию</option>
+                    </select>
+                </div>
+
+                <div class="price_range">
+                    <b>Цена</b>
+
+                    <div class="prices">
+                        <p id="min_price_text" style="margin-right: auto">{{ selected_min_price|intcomma }} тг</p>
+                        <p id="max_price_text">{{ selected_max_price|intcomma }} тг</p>
+                    </div>
+
+                    <div class="price_range_slider">
+                        <hr>
+                        <input id="min_price_input" type="range" min="{{ min_price }}" max="{{ max_price }}" value="{{ selected_min_price }}" oninput="slide_min_price()" onchange="get_products()">
+                        <input id="max_price_input" type="range" min="{{ min_price }}" max="{{ max_price }}" value="{{ selected_max_price }}" oninput="slide_max_price()" onchange="get_products()">
+                    </div>
+                </div>
+
+                <div class="brands">
+                    <b>Бренд</b>
+
+                    <div class="brands_checkbox">
+                        {% for brand in brands %}
+                        <label>
+                            <input type="checkbox" value="{{ brand }}"{% if brand in selected_brands %} checked{% endif %} onchange="get_products()">
+                            <span>{{ brand }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </details>
+
+        <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+            {% include "products.html" %}
+
+            <div id="pagination" style="margin-top: 50px;"></div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

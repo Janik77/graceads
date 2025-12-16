@@ -1,0 +1,25 @@
+<div class="block">
+    <div class="container main_page_leave_request_container">
+        <div class="grace_logo_with_pen"></div>
+
+        <form onsubmit="leave_request_form_submit(event)">
+            {% csrf_token %}
+            <input type="hidden" name="category" value="services">
+            {% if service.name %}
+            <input type="hidden" name="service_name" value="{{ service.name }}">
+            {% endif %}
+
+            <h1>Оставить заявку</h1>
+            <p>Оставьте заявку на консультацию и получите 10% скидку.</p>
+
+            <div class="inputs">
+                <input type="text" placeholder="ФИО" name="fullname">
+                <input type="text" placeholder="Номер телефона" name="phone_number">
+            </div>
+
+            <button type="submit"><span>Оставить заявку</span></button>
+        </form>
+
+        <img class="leave_request_background" src="/static/imgs/leave_request_background.png" alt="">
+    </div>
+</div>

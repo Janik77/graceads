@@ -1,0 +1,61 @@
+{% extends 'base_body.html' %}
+
+{% block body %}
+
+<span style="display: none" id="page_title">{{ service.name }}</span>
+<button style="display: none" onclick="service_page_loaded()" id="page_loaded_js_function"></button>
+
+
+<div id="myModal" class="modal" style="display: none;">
+  <span class="close" onclick="document.getElementById('myModal').style.display = 'none'">×</span>
+
+
+        <button class="prev_btn" onclick="show_prev_img()">
+            <div class="bar-btt"></div>
+            <div class="bar-ttb"></div>
+        </button>
+  <img class="modal-content" id="modal_image" src="">
+
+
+        <button class="next_btn" onclick="show_next_img()">
+            <div class="bar-ttb"></div>
+            <div class="bar-btt"></div>
+        </button>
+</div>
+
+<div class="block">
+    <div class="container service-images">
+        <div class="images-block">
+            <div class="images-list">
+                <div class="images">
+                    {% for image in service.images %}
+                    <div class="image" style="background-image: url({{ image.image }})" data-src="{{ image.image }}" onclick="set_main_image('{{ image.image }}')"></div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <button class="prev_btn" onclick="images_go_left_scroll()">
+            <div class="bar-btt"></div>
+            <div class="bar-ttb"></div>
+        </button>
+        <button class="next_btn" onclick="images_go_right_scroll()">
+            <div class="bar-ttb"></div>
+            <div class="bar-btt"></div>
+        </button>
+    </div>
+</div>
+
+<div class="block">
+    <div class="container service-description">
+        <h1>{{ service.name }}</h1>
+
+        {% autoescape off %}
+        {{ service.description }}
+        {% endautoescape %}
+    </div>
+</div>
+
+{% include 'request_form.html' %}
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base_body.html' %}
+{% load humanize %}
+
+{% block body %}
+
+<span style="display: none" id="page_title">{{ product.name }}</span>
+<button style="display: none" onclick="product_page_loaded()" id="page_loaded_js_function"></button>
+
+
+<div class="block">
+    <div class="container product_info">
+        <h1>{{ product.name }}</h1>
+
+        <div class="more_info">
+            <div class="product_image" style="background-image: url({{ product.poster }})"></div>
+
+            <div class="text">
+                <h2>О товаре</h2>
+                <p><b>Категория:</b> {{ product.category }}</p>
+                <p><b>Код товара:</b> {{ product.code }}</p>
+                <p><b>Бренд:</b> {{ product.brand }}</p>
+                <p class="characteristics_title"><b>Характеристики:</b></p>
+
+                <div class="description" style="margin-top: 5px;">
+                    {% autoescape off %}
+                    {{ product.description }}
+                    {% endautoescape %}
+                </div>
+
+                <div class="buy">
+                    <button onclick="open_buy_form({{ product.id }}, '{{ product.name }}', '{{ product.poster }}', '{{ product.price }}', '{{ product.code }}')">Купить</button>
+                    <h2>{{ product.price|intcomma }} тг</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="product_page">
+{% include 'request_form.html' %}
+    </div>
+{% endblock %}
