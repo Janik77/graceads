@@ -1,23 +1,25 @@
 .store_page .products_info {
     display: flex;
-    gap: 35px;
+    gap: 32px;
 }
 
 .store_page .products_info .products_list {
-    gap: 20px;
+    gap: 24px;
     width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .store_page .products_info .products_list .product_card, .store_page .products_info .products_list .product_card .product_img {
-    width: 223.6px;
+    width: 100%;
 }
 
 .store_page .products_info details {
-    border-radius: 5px;
-    box-shadow: 0px 0px 3px 0 gray;
-
-    padding: 15px 20px;
-    min-width: 290px;
+    border-radius: 16px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e7efee;
+    background: #ffffff;
+    padding: 18px 20px;
+    min-width: 300px;
 
     height: 20px;
     overflow: hidden;
@@ -43,7 +45,7 @@
 }
 
 .store_page .products_info details summary span {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     font-family: Gilroy-Bold;
     margin-right: auto;
@@ -58,7 +60,7 @@
     margin-top: 15px;
     border: none;
     height: 2px;
-    background-color: #53C0A9;
+    background-color: #e0efec;
     margin-bottom: 20px;
 }
 
@@ -77,15 +79,15 @@
 .store_page .products_info details select {
     appearance: none;
 
-    height: 2em;
-    padding: 0 10px;
+    height: 40px;
+    padding: 0 12px;
 
-    border: 1px solid #bbbbbb;
-    border-radius: 0.1em;
+    border: 1px solid #d6e4e2;
+    border-radius: 10px;
     cursor: pointer;
 
-    font-size: 16px;
-    background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.6em center / 1.4em, linear-gradient(to left, #42b8a0 2.5em, rgb(255 255 255) 2.5em);
+    font-size: 15px;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.6em center / 1.2em, linear-gradient(to left, #42b8a0 2.6em, #ffffff 2.6em);
 }
 
 .store_page .products_info details .price_range .prices {
@@ -95,9 +97,9 @@
 
 .store_page .products_info details .price_range .prices p {
     padding: 2px 6px;
-    border-radius: 2px;
-    font-size: 15px;
-    border: 1.2px solid #42b8a0;
+    border-radius: 8px;
+    font-size: 14px;
+    border: 1px solid #42b8a0;
     color: #42b8a0;
     font-weight: bold;
     font-family: 'Gilroy-Medium';
@@ -139,7 +141,7 @@
     height: 20px;
     width: 20px;
     background-color: white;
-    border: 5px solid #42b8a0;
+    border: 4px solid #42b8a0;
     cursor: pointer;
     margin-top: -7.5px;
     pointer-events: auto;
@@ -153,7 +155,7 @@
     cursor: pointer;
     border-radius: 50%;
     background-color: white;
-    border: 5px solid #42b8a0;
+    border: 4px solid #42b8a0;
     pointer-events: auto;
 }
 
@@ -162,7 +164,7 @@
     height: 20px;
     width: 20px;
     cursor: pointer;
-    border: 5px solid #42b8a0;
+    border: 4px solid #42b8a0;
     border-radius: 50%;
     background-color: white;
     pointer-events: auto;
@@ -176,13 +178,13 @@
 .store_page .products_info details .brands .brands_checkbox {
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow: auto;
     max-height: 160px;
 }
 
 .store_page .products_info details .brands .brands_checkbox label {
     cursor: pointer;
-    margin: 5px 0;
+    margin: 4px 0;
 }
 
 .store_page .products_info details .brands .brands_checkbox input {
@@ -210,10 +212,10 @@
 
 .store_page .products_info details .brands .brands_checkbox label > span::before {
     content: '';
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     border: 1px solid #42b8a0;
-    border-radius: 2px;
+    border-radius: 4px;
     margin-right: 5px;
 }
 
