@@ -128,6 +128,25 @@
     width: 220px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.stat_card h2 {
+    margin: 0 0 5px;
+    font-size: 26px;
+    font-family: Gilroy-Bold;
+}
+
+.stat_card p {
+    margin: 0;
+    color: #6b6b6b;
+    font-size: 14px;
+}
+
+.hero__visual {
+    position: relative;
+    min-height: 360px;
+    display: flex;
     align-items: center;
     gap: 6px;
 }
