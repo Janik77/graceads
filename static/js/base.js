@@ -37,8 +37,21 @@ function page_loaded_js_function() {
 }
 
 
+function normalize_url(url) {
+    if (url.startsWith("http")) {
+        return url
+    }
+
+    if (!url.includes("?") && !url.endsWith("/")) {
+        return `${url}/`
+    }
+
+    return url
+}
+
 function load_page(url) {
-    axios(url, {
+    var normalized_url = normalize_url(url)
+    axios(normalized_url, {
         headers: {
             'X-Requested-With': 'XMLHttpRequest'
         }
@@ -52,7 +65,13 @@ function load_page(url) {
         appear_page()
         page_loaded_js_function()
         document.body.style.overflow = 'auto';
-    }).catch(error => console.error('Ошибка загрузки страницы:', error));
+    }).catch(error => {
+        console.error('Ошибка загрузки страницы:', error)
+
+        if (error.response && error.response.status === 404) {
+            window.location.href = normalized_url
+        }
+    });
 }
 
 
@@ -81,8 +100,15 @@ function custom_anchors_click_event(event) {
             }
         }
 
-        window.history.pushState({}, "", href);
-        load_page(href);
+        var normalized_href = normalize_url(href)
+
+        if (normalized_href.startsWith("/store") || normalized_href.startsWith("/product/")) {
+            window.location.href = normalized_href;
+            return;
+        }
+
+        window.history.pushState({}, "", normalized_href);
+        load_page(normalized_href);
     }, 500);
 }
 
@@ -124,7 +150,7 @@ function close_burger() {
 }
 
 
-load_page(window.location.search)
+load_page(window.location.pathname + window.location.search)
 
 
 
@@ -141,7 +167,7 @@ window.addEventListener("popstate", function(event) {
   if (event.type === "popstate") {
     disappear_page()
     setTimeout(function() {
-        load_page(window.location.search)
+        load_page(window.location.pathname + window.location.search)
     }, 500);
   }
 })
