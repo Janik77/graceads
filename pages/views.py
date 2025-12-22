@@ -4,13 +4,19 @@ from django.shortcuts import render, redirect
 from project.utils import base_page_or_content
 from service.presenter import service_services_presenter
 from store.presenter import store_services_presenter
+from settings.models import PartnerLogo
 
 
 @base_page_or_content
 def main_page_view(request):
     services = service_services_presenter.get_many({"limit": 5, "filtration": {"parent_service": None}})
     products = store_services_presenter.get_many({"limit": 8, "ordering": ["-id"]})
-    return render(request, "main_page.html", {"services": services.data, "products": products.data})
+    partner_logos = PartnerLogo.objects.filter(is_active=True)
+    return render(request, "main_page.html", {
+        "services": services.data,
+        "products": products.data,
+        "partner_logos": partner_logos,
+    })
 
 
 @base_page_or_content
