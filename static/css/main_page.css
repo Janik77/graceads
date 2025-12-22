@@ -84,11 +84,12 @@
     border-radius: 16px;
     padding: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    min-width: 200px;
 }
 
 .stat_card h2 {
     margin: 0 0 5px;
-    font-size: 24px;
+    font-size: 22px;
     font-family: Gilroy-Bold;
 }
 
@@ -152,6 +153,8 @@
 }
 
 .hero__badge img {
+    display: block;
+    margin: 0 auto;
     width: 75%;
 }
 
@@ -258,6 +261,12 @@
 .shop_header h2 {
     margin: 0;
     font-family: Gilroy-Bold;
+}
+
+.shop_header p {
+    margin: 0;
+    color: #6b6b6b;
+    font-size: 14px;
 }
 
 .shop_header .shop_cta {
@@ -376,6 +385,7 @@
     flex-direction: column;
     gap: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff;
 }
 
 .products_info .products_list .product_card:hover {

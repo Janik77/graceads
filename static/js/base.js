@@ -42,6 +42,14 @@ function normalize_url(url) {
         return url
     }
 
+    if (url.startsWith("/store") && !url.includes("/store/")) {
+        url = url.replace("/store", "/store/")
+    }
+
+    if (url.startsWith("/product") && !url.includes("/product/")) {
+        url = url.replace("/product", "/product/")
+    }
+
     if (!url.includes("?") && !url.endsWith("/")) {
         return `${url}/`
     }
