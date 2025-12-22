@@ -124,7 +124,7 @@ function close_burger() {
 }
 
 
-load_page(window.location.search)
+load_page(window.location.pathname + window.location.search)
 
 
 
@@ -141,7 +141,7 @@ window.addEventListener("popstate", function(event) {
   if (event.type === "popstate") {
     disappear_page()
     setTimeout(function() {
-        load_page(window.location.search)
+        load_page(window.location.pathname + window.location.search)
     }, 500);
   }
 })
