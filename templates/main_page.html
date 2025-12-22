@@ -6,33 +6,41 @@
 <span style="display: none" id="page_title">Grace Agency</span>
 <button style="display: none" onclick="main_page_loaded()" id="page_loaded_js_function"></button>
 
-<div class="block">
-    <div class="container main_page_info">
-        <div class="info">
-            <h1 class="custom_header">Изготовливаем материалы для вашей рекламы.</h1>
-            <p class="sub-header">Мы изготавливаем объёмные буквы, стенды, световые коробы и многое другое с гарантией качества и сроков.</p>
-            <div class="statistics">
-                <div>
+<div class="block hero-block">
+    <div class="container hero">
+        <div class="hero__content">
+            <p class="hero__eyebrow">Рекламное агентство полного цикла</p>
+            <h1 class="hero__title">Создаём заметную наружную рекламу и брендинг, который продаёт.</h1>
+            <p class="hero__subtitle">
+                Дизайн, производство и монтаж в одном месте. Гарантируем сроки, качество и прозрачную коммуникацию.
+            </p>
+            <div class="hero__actions">
+                <button class="primary_btn" onclick="open_request_form()">Обсудить проект</button>
+                <a class="ghost_btn" href="/services/">Смотреть услуги</a>
+            </div>
+            <div class="hero__stats">
+                <div class="stat_card">
                     <h2>{{ information_on_site.statistics.ceil1 }} года</h2>
                     <p>на рынке</p>
                 </div>
-                <div>
+                <div class="stat_card">
                     <h2>{{ information_on_site.statistics.ceil2 }}</h2>
                     <p>постоянных клиентов</p>
                 </div>
-                <div>
+                <div class="stat_card">
                     <h2>{{ information_on_site.statistics.ceil3 }}</h2>
-                    <p>заказов</p>
+                    <p>проектов реализовано</p>
                 </div>
-                <div>
+                <div class="stat_card">
                     <h2>{{ information_on_site.statistics.ceil4 }}</h2>
-                    <p>кв.м площади производств</p>
+                    <p>кв.м производства</p>
                 </div>
             </div>
         </div>
 
-        <div class="banner">
-            <div class="choices_us">
+        <div class="hero__visual">
+            <div class="hero__image"></div>
+            <div class="hero__badge">
                 <img src="/static/imgs/choices_us_companies.png" alt="">
                 <p>{{ information_on_site.statistics.ceil5 }} компании выбирают нас</p>
             </div>
@@ -43,22 +51,35 @@
 
 <div class="after_main_page_info">
     <div class="block">
-        <div class="container services_info">
-            <h1 class="header">Наши услуги</h1>
-            {% include 'services.html' %}
+        <div class="container advantages">
+            <div class="advantages__header">
+                <h2>Почему выбирают Grace Agency</h2>
+                <p>Полный цикл работ и современное производство позволяют делать проекты быстро и качественно.</p>
+            </div>
+            <div class="advantages__grid">
+                <div class="advantage_card">
+                    <h3>Дизайн и брендинг</h3>
+                    <p>Создаём концепцию, подбираем материалы и оформляем ваш бренд для наружной рекламы.</p>
+                </div>
+                <div class="advantage_card">
+                    <h3>Собственное производство</h3>
+                    <p>Контролируем качество на каждом этапе и соблюдаем сроки без посредников.</p>
+                </div>
+                <div class="advantage_card">
+                    <h3>Монтаж под ключ</h3>
+                    <p>Берём на себя доставку, монтаж и согласование, чтобы вы получили готовый результат.</p>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="block">
-        <div class="container products_info">
-            <h1 class="header">Наш магазин</h1>
-            <p>На нашем онлайн магазине вы можете приобрести орг. техники по самым вкусным ценам ))</p>
-
-            {% include 'products.html' %}
-
-            <div class="go_to_store">
-                <a href="/store/"><span>Перейти в магазин</span></a>
+        <div class="container services_info">
+            <div class="section_title">
+                <h2>Услуги рекламного агентства</h2>
+                <p>Подберём оптимальное решение под бюджет, сроки и задачи.</p>
             </div>
+            {% include 'services.html' %}
         </div>
     </div>
 
