@@ -85,15 +85,13 @@
 
     <div class="block">
         <div class="container products_info">
-            <div class="section_title">
+            <div class="shop_header">
                 <h2>Наш магазин</h2>
-                <p>Это наш фирменный магазин с товарами и материалами для рекламы.</p>
+                <a class="shop_cta" href="/store/">Перейти в магазин</a>
             </div>
 
-            {% include 'products.html' %}
-
-            <div class="go_to_store">
-                <a href="/store/"><span>Перейти в магазин</span></a>
+            <div class="shop_showcase">
+                {% include 'products.html' %}
             </div>
             {% include 'services.html' %}
         </div>
