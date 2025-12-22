@@ -1,10 +1,10 @@
 @media(max-width: 1150px) {
     .store_page .products_info details {
-        min-width: 261px;
+        min-width: 240px;
     }
 
     .store_page .products_info .products_list .product_card, .store_page .products_info .products_list .product_card .product_img {
-        width: 150px;
+        width: 100%;
     }
 }
 
@@ -19,26 +19,37 @@
     }
 
     .store_page .products_info .products_list .product_card, .store_page .products_info .products_list .product_card .product_img {
-        width: 175.3px;
+        width: 100%;
     }
 
     .store_page .products_info .products_list {
-        gap: 25px;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .store_page .products_info details {
+        width: 100%;
+        min-width: auto;
     }
 }
 
 @media(max-width: 630px) {
     .store_page .products_info .products_list .product_card, .store_page .products_info .products_list .product_card .product_img {
-        width: 142px;
+        width: 100%;
     }
 
     .store_page .products_info .products_list {
-        gap: 15px;
+        gap: 16px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
 @media(max-width: 500px) {
     .store_page .products_info .products_list .product_card, .store_page .products_info .products_list .product_card .product_img {
-        width: 159.5px;
+        width: 100%;
+    }
+
+    .store_page .products_info .products_list {
+        grid-template-columns: 1fr;
     }
 }

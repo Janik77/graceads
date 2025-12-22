@@ -74,6 +74,7 @@
 
     .hero__stats {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
     }
 
 
@@ -244,12 +245,31 @@
         font-size: 15px;
     }
 
+    .hero__badge {
+        position: static;
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .hero__badge img {
+        width: 60%;
+    }
+
+    .hero__stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .stat_card {
+        padding: 12px 14px;
+    }
+
     .stat_card h2 {
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .stat_card p {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .partners_info .partners_list {
