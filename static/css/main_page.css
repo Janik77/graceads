@@ -74,9 +74,8 @@
 
 .hero__stats {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 16px;
-    align-items: stretch;
 }
 
 .stat_card {
@@ -85,10 +84,6 @@
     border-radius: 16px;
     padding: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
-    min-height: 98px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .stat_card h2 {
@@ -131,6 +126,25 @@
     width: 220px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.stat_card h2 {
+    margin: 0 0 5px;
+    font-size: 26px;
+    font-family: Gilroy-Bold;
+}
+
+.stat_card p {
+    margin: 0;
+    color: #6b6b6b;
+    font-size: 14px;
+}
+
+.hero__visual {
+    position: relative;
+    min-height: 360px;
+    display: flex;
     align-items: center;
     gap: 6px;
 }
@@ -442,8 +456,7 @@
     margin: 0 auto;
     opacity: 0;
     transform: translateY(100%);
-    filter: grayscale(100%);
-    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .partners_info .partners_list .partner_card img {
@@ -451,6 +464,8 @@
     height: 100%;
     object-fit: contain;
     display: block;
+    filter: grayscale(100%);
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .partners_info .partners_list .partner_card.in-viewport {
@@ -458,9 +473,13 @@
 }
 
 .partners_info .partners_list .partner_card:hover {
-    filter: grayscale(0%);
     transform: translateY(-4px) scale(1.03);
     opacity: 1;
+}
+
+.partners_info .partners_list .partner_card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.03);
 }
 
 .main_page_leave_request_container {
