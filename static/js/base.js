@@ -102,6 +102,11 @@ function custom_anchors_click_event(event) {
 
         var normalized_href = normalize_url(href)
 
+        if (normalized_href.startsWith("/store") || normalized_href.startsWith("/product/")) {
+            window.location.href = normalized_href;
+            return;
+        }
+
         window.history.pushState({}, "", normalized_href);
         load_page(normalized_href);
     }, 500);

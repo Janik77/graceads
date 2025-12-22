@@ -88,14 +88,15 @@
 
 .stat_card h2 {
     margin: 0 0 5px;
-    font-size: 26px;
+    font-size: 24px;
     font-family: Gilroy-Bold;
 }
 
 .stat_card p {
     margin: 0;
     color: #6b6b6b;
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 1.4;
 }
 
 .hero__visual {
@@ -118,7 +119,8 @@
 .hero__badge {
     position: absolute;
     bottom: 10px;
-    right: 5%;
+    left: 50%;
+    transform: translateX(-50%);
     background: #ffffff;
     border-radius: 16px;
     padding: 14px 18px;
