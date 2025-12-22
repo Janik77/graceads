@@ -15,9 +15,12 @@
         height: 320px;
     }
 
+    .hero__stats {
+        grid-template-columns: repeat(2, minmax(160px, 1fr));
+    }
+
     .services_info .services_list .service_card {
         height: 320px;
-        width: 266.6px;
     }
 
     .services_info .services_list .service_card .service_img {
@@ -29,17 +32,15 @@
     }
 
     .services_info .services_list .service_card.special_service_card {
-        width: 412px;
+        width: 100%;
     }
 
     .partners_info .partners_list {
-        gap: 50px;
-        row-gap: 30px;
+        gap: 24px;
     }
 
     .partners_info .partners_list .partner_card {
         height: 70px;
-        width: 175px;
     }
 
     .main_page_leave_request_container .grace_logo_with_pen {
@@ -74,9 +75,12 @@
         width: auto;
     }
 
+    .hero__stats {
+        grid-template-columns: repeat(2, minmax(160px, 1fr));
+    }
+
     .services_info .services_list .service_card {
         height: 230px;
-        width: 183.3px;
     }
 
     .services_info .services_list .service_card .service_img {
@@ -96,11 +100,7 @@
     }
 
     .services_info .services_list .service_card.special_service_card {
-        width: 290px;
-    }
-
-    .partners_info .partners_list .partner_card {
-        width: 166.6px;
+        width: 100%;
     }
 
     .main_page_leave_request_container {
@@ -147,7 +147,6 @@
     }
 
     .services_info .services_list .service_card {
-        width: 186.3px;
         border-radius: 14px;
     }
 
@@ -175,26 +174,12 @@
         align-self: flex-start;
     }
 
-    .services_info .services_list .service_card, .services_info .services_list .service_card.special_service_card {
-        width: 47.3%;
-    }
-
-    .services_info .services_list .service_card.special_service_card.very_special_service_card {
-        width: 100%;
-    }
-
     .services_info .services_list .service_card {
         height: 210px;
     }
 
     .services_info .services_list .service_card .service_img {
         height: 150px;
-    }
-
-    .services_info .services_list .service_card, .services_info .services_list .service_card.special_service_card:first-child, .services_info .services_list .service_card.special_service_card.one_row_service_card {
-        width: 47.9%;
-        box-shadow: 0 0 7px 0px #cfcfcf;
-        margin-bottom: 0;
     }
 
     .services_info .services_list .service_card .text h3 {
@@ -206,11 +191,7 @@
     }
 
     .partners_info .partners_list {
-        row-gap: 10px;
-    }
-
-    .partners_info .partners_list .partner_card {
-        width: 126.6px;
+        row-gap: 16px;
     }
 
     .main_page_leave_request_container form h1 {
@@ -268,10 +249,6 @@
         font-size: 13px;
     }
 
-    .partners_info .partners_list .partner_card {
-        width: 150px;
-    }
-
     .partners_info .partners_list {
         row-gap: 12px;
     }
@@ -298,13 +275,6 @@
 
     .main_page_leave_request_container {
         transform: translateY(40%);
-    }
-
-    .services_info .services_list .service_card, .services_info .services_list .service_card.special_service_card, .services_info .services_list .service_card.special_service_card.one_row_service_card {
-        width: 47.1%;
-        box-shadow: 0 0 7px 0px #cfcfcf;
-        margin-bottom: 0;
-        border-radius: 10px;
     }
 
     .services_info .services_list .service_card .service_img {
