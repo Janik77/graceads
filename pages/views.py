@@ -3,12 +3,14 @@ import json
 from django.shortcuts import render, redirect
 from project.utils import base_page_or_content
 from service.presenter import service_services_presenter
+from store.presenter import store_services_presenter
 
 
 @base_page_or_content
 def main_page_view(request):
     services = service_services_presenter.get_many({"limit": 5, "filtration": {"parent_service": None}})
-    return render(request, "main_page.html", {"services": services.data})
+    products = store_services_presenter.get_many({"limit": 8, "ordering": ["-id"]})
+    return render(request, "main_page.html", {"services": services.data, "products": products.data})
 
 
 @base_page_or_content
