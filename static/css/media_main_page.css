@@ -245,6 +245,10 @@
         font-size: 15px;
     }
 
+    .hero__visual {
+        padding: 0 10px;
+    }
+
     .hero__badge {
         position: static;
         width: 100%;
@@ -252,7 +256,7 @@
     }
 
     .hero__badge img {
-        width: 60%;
+        width: 68%;
     }
 
     .hero__stats {
@@ -274,6 +278,7 @@
 
     .partners_info .partners_list {
         row-gap: 12px;
+        padding: 0 6px;
     }
 
     .main_page_leave_request_container {
