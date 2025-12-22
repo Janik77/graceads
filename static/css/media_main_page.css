@@ -1,41 +1,18 @@
 @media(max-width: 1150px) {
-	.main_page_info .info h1 {
-		font-size: 37px;
-		line-height: 35px;
-		letter-spacing: 1px;
-		width: 350px;
-	}
-
-	.main_page_info .info .sub-header {
-	    font-size: 18px;
-	}
-
-    .main_page_info {
-        gap: 35px;
+    .hero__title {
+        font-size: 40px;
     }
 
-	.main_page_info .info {
-	    width: 380px;
-	}
-
-	.main_page_info .info .statistics div {
-        width: 45%;
-        height: 100px;
+    .hero__subtitle {
+        font-size: 17px;
     }
 
-    .main_page_info .info .statistics div h2 {
-        font-size: 27px;
+    .hero__visual {
+        min-height: 320px;
     }
 
-    .main_page_info .info .statistics div p {
-        font-size: 18px;
-    }
-
-    .main_page_info .banner .choices_us {
-        bottom: 95px;
-        width: 230px;
-        height: 100px;
-        gap: 5px;
+    .hero__image {
+        height: 320px;
     }
 
     .services_info .services_list .service_card {
@@ -53,24 +30,6 @@
 
     .services_info .services_list .service_card.special_service_card {
         width: 412px;
-    }
-
-    .products_info p {
-        font-size: 19px;
-    }
-
-    .products_info .products_list .product_card {
-        height: 295px;
-        width: 150px;
-    }
-
-    .products_info .products_list .product_card .product_img {
-        min-height: 150px;
-        min-width: 150px;
-    }
-
-    .products_info .products_list .product_card .text {
-        padding: 8px 5px 0px 5px;
     }
 
     .partners_info .partners_list {
@@ -101,59 +60,18 @@
 }
 
 @media(max-width: 900px) {
-    .main_page_info .banner .choices_us {
-        display: none;
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 25px;
     }
 
-    .main_page_info .banner {
-        position: absolute;
-        height: 240px;
-        left: 40%;
-
-        opacity: 0;
-        transform: translateX(20%);
-        animation: appearx 0.5s forwards;
-        animation-delay: 0.55s;
+    .hero__visual {
+        order: -1;
     }
 
-    .main_page_info .info .statistics div:nth-child(1) {
-      animation-delay: 0.9s; /* Delay for the first element */
-    }
-
-    .main_page_info .info .statistics div:nth-child(2) {
-      animation-delay: 1.2s; /* Delay for the second element */
-    }
-
-    .main_page_info .info .statistics div:nth-child(3) {
-      animation-delay: 1.4s; /* Delay for the third element */
-    }
-
-    .main_page_info .info .statistics div:nth-child(4) {
-      animation-delay: 1.8s; /* Delay for the fourth element */
-    }
-
-    .after_main_page_info {
-        opacity: 0;
-        transform: translateY(20%);
-        animation: appear 0.5s forwards;
-        animation-delay: 2s;
-    }
-
-    .main_page_info .info {
-        z-index: 1;
-        width: 100%;
-    }
-
-    .main_page_info .info .statistics {
-        width: 100%;
-    }
-
-    .main_page_info .info .sub-header {
-        width: 360px;
-    }
-
-    .main_page_info .info .statistics div {
-        width: 48.7%;
+    .hero__badge {
+        position: static;
+        width: auto;
     }
 
     .services_info .services_list .service_card {
@@ -179,18 +97,6 @@
 
     .services_info .services_list .service_card.special_service_card {
         width: 290px;
-    }
-
-    .products_info .products_list {
-        gap: 25px;
-    }
-
-    .products_info .products_list .product_card, .products_info .products_list .product_card .product_img {
-        min-width: 175.3px;
-    }
-
-    .products_info .products_list .product_card:nth-last-child(2), .products_info .products_list .product_card:last-child {
-        display: none;
     }
 
     .partners_info .partners_list .partner_card {
@@ -251,14 +157,22 @@
     }
 }
 
-
 @media(max-width: 630px) {
-    .main_page_info .info .sub-header {
-        width: 285px;
+    .hero__title {
+        font-size: 32px;
     }
 
-    .main_page_info .info .statistics div {
-        width: 48.4%;
+    .hero__subtitle {
+        font-size: 16px;
+    }
+
+    .hero__actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero__badge {
+        align-self: flex-start;
     }
 
     .services_info .services_list .service_card, .services_info .services_list .service_card.special_service_card {
@@ -289,47 +203,6 @@
 
     .services_info .services_list .service_card .text p {
         font-size: 12px;
-    }
-
-    .products_info .products_list {
-        gap: 15px;
-    }
-
-    .products_info .products_list .product_card, .products_info .products_list .product_card .product_img {
-        min-width: 224.5px;
-    }
-
-    .products_info .products_list .product_card:nth-last-child(2) {
-        display: flex;
-    }
-
-    .products_info .products_list .product_card {
-        height: 285px;
-    }
-
-    .products_info .products_list .product_card .text .pre_product_name_block h4 {
-        font-size: 15px;
-    }
-
-    .products_info .products_list .product_card .text p {
-        font-size: 12px;
-    }
-
-    .products_info .products_list .product_card .text h3 {
-        font-size: 17px;
-    }
-
-    .products_info .products_list .product_card .text button {
-        font-size: 17px;
-        width: 90px;
-        height: 30px;
-    }
-
-    .products_info .go_to_store button {
-        font-size: 17px;
-        width: 270px;
-        height: 38px;
-        margin-top: 20px;
     }
 
     .partners_info .partners_list {
@@ -375,44 +248,24 @@
     .main_page_leave_request_container {
         transform: translateY(50%);
     }
-
-    .products_info .products_list .product_card .text .pre_product_name_block {
-        min-height: 38px;
-    }
 }
 
 
 @media(max-width: 500px) {
-    .main_page_info .banner {
-        left: 46%;
+    .hero__title {
+        font-size: 26px;
     }
 
-    .main_page_info .info h1 {
-        font-size: 25px;
-        line-height: 25px;
-        letter-spacing: 0px;
-        width: 265px;
-    }
-
-    .main_page_info .info .sub-header {
-        width: 215px;
+    .hero__subtitle {
         font-size: 15px;
     }
 
-    .main_page_info .info .statistics div {
-        width: 47.8%;
+    .stat_card h2 {
+        font-size: 22px;
     }
 
-    .main_page_info .info .statistics div h2 {
-        font-size: 23px;
-    }
-
-    .main_page_info .info .statistics div p {
-        font-size: 14px;
-    }
-
-    .products_info .products_list .product_card, .products_info .products_list .product_card .product_img {
-        min-width: 159.5px;
+    .stat_card p {
+        font-size: 13px;
     }
 
     .partners_info .partners_list .partner_card {
@@ -457,9 +310,5 @@
     .services_info .services_list .service_card .service_img {
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
-    }
-
-    .main_page_info .info .statistics div {
-        border-radius: 12px;
     }
 }
