@@ -245,6 +245,16 @@
         font-size: 15px;
     }
 
+    .hero__badge {
+        position: static;
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .hero__badge img {
+        width: 60%;
+    }
+
     .hero__stats {
         grid-template-columns: 1fr;
         gap: 12px;
