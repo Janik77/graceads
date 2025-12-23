@@ -77,7 +77,7 @@
         <div class="container services_info">
             <div class="section_title">
                 <h2>Портфолио услуг рекламного агентства</h2>
-                <p>Полный цикл работ и современное производство позволяют делать проекты быстро и качественно.</p>
+                <p>Каждый блок — живая услуга из админки, которую можно быстро обновлять и дополнять.</p>
             </div>
             {% include 'services.html' %}
         </div>
@@ -86,11 +86,11 @@
     <div class="block">
         <div class="container products_info">
             <div class="shop_header">
-                <div>
-                    <h2>Наш магазин</h2>
-                    <p>Подборка популярной оргтехники из каталога.</p>
-                </div>
-                <a class="shop_cta" href="/store/">Перейти в магазин</a>
+                <h2>Наш магазин</h2>
+            </div>
+
+            <div class="shop_showcase">
+                {% include 'products.html' %}
             </div>
 
             <div class="shop_showcase">
