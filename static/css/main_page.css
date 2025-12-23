@@ -1,14 +1,14 @@
 .hero-block {
-    background: radial-gradient(circle at top, rgba(66, 184, 160, 0.18), transparent 55%),
+    background: radial-gradient(circle at top, rgba(66, 184, 160, 0.15), transparent 55%),
         linear-gradient(135deg, #f9fbfb 0%, #ffffff 60%);
 }
 
 .hero {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 48px;
+    gap: 40px;
     align-items: center;
-    padding: 30px 0 30px;
+    padding: 30px 0 10px;
 
     opacity: 0;
     transform: translateY(20%);
@@ -26,7 +26,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--color-primary);
+    color: #42b8a0;
     margin: 0;
 }
 
@@ -41,7 +41,7 @@
     font-size: 18px;
     line-height: 1.6;
     margin: 0;
-    color: var(--color-muted);
+    color: #4d4d4d;
 }
 
 .hero__actions {
@@ -51,39 +51,25 @@
 }
 
 .primary_btn {
-    background-color: var(--color-primary);
+    background-color: #42b8a0;
     color: #ffffff;
     border: none;
-    border-radius: var(--radius-pill);
+    border-radius: 999px;
     padding: 12px 28px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     box-shadow: 0 10px 20px rgba(66, 184, 160, 0.25);
-    transition: transform var(--transition-base), box-shadow var(--transition-base), background var(--transition-base);
-}
-
-.primary_btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 16px 30px rgba(66, 184, 160, 0.35);
-    background: var(--color-primary-dark);
 }
 
 .ghost_btn {
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-pill);
+    border: 1px solid #d8e5e3;
+    border-radius: 999px;
     padding: 12px 26px;
     text-decoration: none;
-    color: var(--color-text);
+    color: #2f2f2f;
     font-weight: 600;
-    background: var(--color-surface);
-    transition: border var(--transition-base), color var(--transition-base), transform var(--transition-base);
-}
-
-.ghost_btn:hover {
-    border-color: var(--color-primary);
-    color: var(--color-primary);
-    transform: translateY(-2px);
+    background: #ffffff;
 }
 
 .hero__stats {
@@ -93,11 +79,11 @@
 }
 
 .stat_card {
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
+    background: #ffffff;
+    border: 1px solid #ebf2f2;
+    border-radius: 18px;
     padding: 14px 16px;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
     min-width: 0;
     display: flex;
     flex-direction: column;
@@ -112,7 +98,7 @@
 
 .stat_card p {
     margin: 0;
-    color: var(--color-muted);
+    color: #6b6b6b;
     font-size: 13px;
     line-height: 1.4;
 }
@@ -139,10 +125,10 @@
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--color-surface);
-    border-radius: var(--radius-md);
+    background: #ffffff;
+    border-radius: 16px;
     padding: 14px 18px;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
     width: 220px;
     display: flex;
     flex-direction: column;
@@ -167,7 +153,7 @@
     margin: 0;
     text-align: center;
     font-size: 14px;
-    color: var(--color-muted);
+    color: #444444;
 }
 
 @keyframes appear {
@@ -204,7 +190,7 @@
 
 .advantages__header p {
     margin: 0;
-    color: var(--color-muted);
+    color: #5d5d5d;
     font-size: 18px;
 }
 
@@ -215,17 +201,10 @@
 }
 
 .advantage_card {
-    border-radius: var(--radius-md);
-    padding: 24px;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-xs);
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
-}
-
-.advantage_card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+    border-radius: 18px;
+    padding: 22px;
+    background: #f6fbfa;
+    border: 1px solid #e3f2f0;
 }
 
 .advantage_card h3 {
@@ -235,7 +214,7 @@
 
 .advantage_card p {
     margin: 0;
-    color: var(--color-muted);
+    color: #4b4b4b;
     line-height: 1.5;
 }
 
@@ -253,7 +232,7 @@
 
 .section_title p {
     margin: 0;
-    color: var(--color-muted);
+    color: #5d5d5d;
 }
 
 .products_info {
@@ -277,36 +256,27 @@
 
 .shop_header p {
     margin: 0;
-    color: var(--color-muted);
+    color: #6b6b6b;
     font-size: 14px;
 }
 
 .shop_header .shop_cta {
-    background-color: var(--color-primary);
+    background-color: #42b8a0;
     color: white;
     font-size: 16px;
     border: none;
-    border-radius: var(--radius-pill);
+    border-radius: 999px;
     padding: 10px 26px;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 10px 20px rgba(66, 184, 160, 0.25);
-    transition: transform var(--transition-base), box-shadow var(--transition-base), background var(--transition-base);
-}
-
-.shop_header .shop_cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 16px 30px rgba(66, 184, 160, 0.35);
-    background: var(--color-primary-dark);
 }
 
 .shop_showcase {
-    background: var(--color-bg-alt);
-    border-radius: var(--radius-lg);
-    padding: 28px;
-    box-shadow: var(--shadow-xs);
+    background: #f9fbfb;
+    border-radius: 24px;
+    padding: 24px;
 }
 
 .products_info .section_title {
@@ -323,14 +293,13 @@
     height: 355px;
     width: 100%;
     border: none;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
-    color: var(--color-text);
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    color: black;
     text-decoration: none;
     overflow: hidden;
     position: relative;
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
-    background: var(--color-surface);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .services_info .services_list .service_card.special_service_card.one_row_service_card {
@@ -349,9 +318,9 @@
     background-position: top;
     height: 275px;
     width: 100%;
-    border-top-left-radius: var(--radius-lg);
-    border-top-right-radius: var(--radius-lg);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 0.2px solid rgba(0, 0, 0, 0.08);
     position: relative;
 }
 
@@ -366,7 +335,7 @@
 }
 
 .services_info .services_list .service_card .text p {
-    color: var(--color-muted);
+    color: #959595;
     font-size: 17px;
 }
 
@@ -376,14 +345,14 @@
     right: 18px;
     bottom: 18px;
     font-size: 14px;
-    color: var(--color-primary);
+    color: #42b8a0;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .services_info .services_list .service_card:hover {
     transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
 }
 
 .services_info .services_list .service_card:hover::after {
@@ -397,22 +366,22 @@
 }
 
 .products_info .products_list .product_card {
-    border-radius: var(--radius-lg);
-    border: 1px solid var(--color-border);
-    box-shadow: var(--shadow-xs);
-    padding: 14px;
-    color: var(--color-text);
+    border-radius: 18px;
+    border: 1px solid #eef3f3;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    padding: 12px;
+    color: black;
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    gap: 14px;
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
-    background: var(--color-surface);
+    gap: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff;
 }
 
 .products_info .products_list .product_card:hover {
     transform: translateY(-6px);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.12);
 }
 
 .products_info .products_list .product_card .product_img {
@@ -420,8 +389,8 @@
     background-size: contain;
     background-position: center;
     min-height: 180px;
-    border-radius: var(--radius-md);
-    background-color: #f3f6f6;
+    border-radius: 12px;
+    background-color: #f6f8f8;
 }
 
 .products_info .products_list .product_card .text {
@@ -438,7 +407,7 @@
 }
 
 .products_info .products_list .product_card .text p {
-    color: var(--color-muted);
+    color: #808080;
     font-size: 13px;
 }
 
@@ -468,22 +437,14 @@
 }
 
 .products_info .products_list .product_card .text button {
-    background-color: var(--color-primary);
+    background-color: #42b8a0;
     border: none;
-    border-radius: var(--radius-pill);
+    border-radius: 999px;
     width: 120px;
     height: 34px;
     color: white;
     font-size: 15px;
     cursor: pointer;
-    transition: transform var(--transition-base), box-shadow var(--transition-base), background var(--transition-base);
-    box-shadow: 0 8px 16px rgba(66, 184, 160, 0.2);
-}
-
-.products_info .products_list .product_card .text button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 22px rgba(66, 184, 160, 0.35);
-    background: var(--color-primary-dark);
 }
 
 .products_info .go_to_store {
@@ -495,24 +456,16 @@
     margin: 25px auto 0px auto;
     width: 285px;
     height: 40px;
-    background-color: var(--color-primary);
+    background-color: #42b8a0;
     color: white;
     font-size: 18px;
     border: none;
-    border-radius: var(--radius-pill);
+    border-radius: 999px;
     cursor: pointer;
     text-align: center;
     display: flex;
     align-items: center;
     text-decoration: none;
-    box-shadow: 0 10px 20px rgba(66, 184, 160, 0.25);
-    transition: transform var(--transition-base), box-shadow var(--transition-base), background var(--transition-base);
-}
-
-.products_info .go_to_store a:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 16px 30px rgba(66, 184, 160, 0.35);
-    background: var(--color-primary-dark);
 }
 
 .products_info .go_to_store a span {
@@ -536,9 +489,9 @@
     height: 76px;
     width: 100%;
     max-width: 190px;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-sm);
+    background: #ffffff;
+    border: 1px solid #e8eeee;
+    border-radius: 14px;
     padding: 12px 16px;
     display: flex;
     align-items: center;
@@ -565,7 +518,7 @@
 .partners_info .partners_list .partner_card:hover {
     transform: translateY(-4px) scale(1.03);
     opacity: 1;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
 
 .partners_info .partners_list .partner_card:hover img {
@@ -574,8 +527,8 @@
 }
 
 .main_page_leave_request_container {
-    background-color: #d2f0ea;
-    border-radius: var(--radius-lg);
+    background-color: #BAE6DD;
+    border-radius: 15px;
     display: flex;
     padding: 20px 0px;
     margin-top: 30px;
@@ -609,8 +562,8 @@
 .main_page_leave_request_container form input {
     width: 250px;
     height: 20px;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-sm);
+    border: 1px solid #afafaf;
+    border-radius: 5px;
     padding: 5px 10px;
 }
 
@@ -619,19 +572,11 @@
     width: 272.5px;
     height: 40px;
     border: none;    
-    border-radius: var(--radius-pill);
+    border-radius: 5px;
     margin-top: 17px;
-    background-color: var(--color-primary);
+    background-color: #42b8a0;
     color: white;
     font-size: 18px;
-    box-shadow: 0 10px 20px rgba(66, 184, 160, 0.25);
-    transition: transform var(--transition-base), box-shadow var(--transition-base), background var(--transition-base);
-}
-
-.main_page_leave_request_container form button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 16px 30px rgba(66, 184, 160, 0.35);
-    background: var(--color-primary-dark);
 }
 
 .main_page_leave_request_container .grace_logo_with_pen {
@@ -660,15 +605,15 @@
 }
 
 #request-form-window .request-form-block {
-    background: var(--color-surface);
+    background: white;
     width: min(520px, 92%);
     margin: 10% auto auto auto;
     padding: 32px;
     min-width: fit-content;
     position: relative;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.2);
+    border: 1px solid #edf4f3;
 }
 
 #request-form-window .request-form-block h4 {
@@ -687,28 +632,20 @@
     padding: 0 14px;
     outline: none;
     margin-bottom: 12px;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    border: 1px solid #dfe9e8;
 }
 
 #request-form-window form button {
-    background: var(--color-primary);
+    background: #42b8a0;
     color: white;
     width: 100%;
     height: 44px;
     margin-top: 8px;
     border: none;
     font-size: 15px;
-    border-radius: var(--radius-pill);
+    border-radius: 999px;
     font-weight: 600;
-    box-shadow: 0 10px 20px rgba(66, 184, 160, 0.25);
-    transition: transform var(--transition-base), box-shadow var(--transition-base), background var(--transition-base);
-}
-
-#request-form-window form button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 16px 30px rgba(66, 184, 160, 0.35);
-    background: var(--color-primary-dark);
 }
 
 #buy-form-window {
@@ -732,15 +669,15 @@
 }
 
 #buy-form-window .buy-form-block {
-    background: var(--color-surface);
+    background: white;
     width: min(620px, 92%);
     margin: 8% auto auto auto;
     padding: 32px;
     min-width: fit-content;
     position: relative;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-lg);
-    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.2);
+    border: 1px solid #edf4f3;
 }
 
 #buy-form-window h5, h6 {
@@ -758,26 +695,18 @@
     padding: 0 14px;
     outline: none;
     margin-bottom: 12px;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    border: 1px solid #dfe9e8;
 }
 
 #buy-form-window form button {
-    background: var(--color-primary);
+    background: #42b8a0;
     color: white;
     width: 100%;
     height: 44px;
     margin-top: 8px;
     border: none;
     font-size: 15px;
-    border-radius: var(--radius-pill);
+    border-radius: 999px;
     font-weight: 600;
-    box-shadow: 0 10px 20px rgba(66, 184, 160, 0.25);
-    transition: transform var(--transition-base), box-shadow var(--transition-base), background var(--transition-base);
-}
-
-#buy-form-window form button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 16px 30px rgba(66, 184, 160, 0.35);
-    background: var(--color-primary-dark);
 }

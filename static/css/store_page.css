@@ -1,7 +1,6 @@
 .store_page .products_info {
     display: flex;
     gap: 32px;
-    align-items: flex-start;
 }
 
 .store_page .products_info .products_list {
@@ -15,17 +14,17 @@
 }
 
 .store_page .products_info details {
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--color-border);
-    background: var(--color-surface);
-    padding: 20px 22px;
+    border-radius: 16px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e7efee;
+    background: #ffffff;
+    padding: 18px 20px;
     min-width: 300px;
 
     height: 20px;
     overflow: hidden;
 
-    transition: height 0.5s ease-in-out, box-shadow var(--transition-base);
+    transition: height 0.5s ease-in-out;
 }
 
 .store_page .products_info details.open_details {
@@ -61,7 +60,7 @@
     margin-top: 15px;
     border: none;
     height: 2px;
-    background-color: var(--color-border);
+    background-color: #e0efec;
     margin-bottom: 20px;
 }
 
@@ -71,7 +70,6 @@
     flex-direction: column;
     gap: 10px;
     position: relative;
-    color: var(--color-text);
 }
 
 .store_page .products_info details .brands {
@@ -84,12 +82,12 @@
     height: 40px;
     padding: 0 12px;
 
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-sm);
+    border: 1px solid #d6e4e2;
+    border-radius: 10px;
     cursor: pointer;
 
     font-size: 15px;
-    background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.6em center / 1.2em, linear-gradient(to left, var(--color-primary) 2.6em, #ffffff 2.6em);
+    background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.6em center / 1.2em, linear-gradient(to left, #42b8a0 2.6em, #ffffff 2.6em);
 }
 
 .store_page .products_info details .price_range .prices {
@@ -99,10 +97,10 @@
 
 .store_page .products_info details .price_range .prices p {
     padding: 2px 6px;
-    border-radius: var(--radius-sm);
+    border-radius: 8px;
     font-size: 14px;
-    border: 1px solid var(--color-primary);
-    color: var(--color-primary);
+    border: 1px solid #42b8a0;
+    color: #42b8a0;
     font-weight: bold;
     font-family: 'Gilroy-Medium';
     margin: 0;
@@ -143,7 +141,7 @@
     height: 20px;
     width: 20px;
     background-color: white;
-    border: 4px solid var(--color-primary);
+    border: 4px solid #42b8a0;
     cursor: pointer;
     margin-top: -7.5px;
     pointer-events: auto;
@@ -157,7 +155,7 @@
     cursor: pointer;
     border-radius: 50%;
     background-color: white;
-    border: 4px solid var(--color-primary);
+    border: 4px solid #42b8a0;
     pointer-events: auto;
 }
 
@@ -166,7 +164,7 @@
     height: 20px;
     width: 20px;
     cursor: pointer;
-    border: 4px solid var(--color-primary);
+    border: 4px solid #42b8a0;
     border-radius: 50%;
     background-color: white;
     pointer-events: auto;
@@ -174,7 +172,7 @@
 
 .store_page .products_info details .price_range .price_range_slider input:active::-webkit-slider-thumb{
     background-color: white;
-    border: 3px solid var(--color-primary);
+    border: 3px solid #42b8a0;
 }
 
 .store_page .products_info details .brands .brands_checkbox {
@@ -216,24 +214,21 @@
     content: '';
     width: 16px;
     height: 16px;
-    border: 1px solid var(--color-primary);
+    border: 1px solid #42b8a0;
     border-radius: 4px;
     margin-right: 5px;
 }
 
 .store_page .products_info details .brands .brands_checkbox label > input:checked+span::before {
-    background-color: var(--color-primary);
+    background-color: #42b8a0;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
 }
 
 .store_page .products_info #pagination a {
     font-size: 20px;
-    color: var(--color-text);
 }
 
 .store_page .products_info #pagination .active a {
-    background: var(--color-primary);
+    background: #42b8a0;
     color: white;
-    border-radius: var(--radius-pill);
-    padding: 4px 12px;
 }
