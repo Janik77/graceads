@@ -1,26 +1,4 @@
-function product_page_loaded() {
-    var tab_buttons = document.querySelectorAll(".product_tabs .tab_button")
-
-    tab_buttons.forEach(function(button) {
-        button.addEventListener("click", function() {
-            var tab = button.getAttribute("data-tab")
-
-            document.querySelectorAll(".product_tabs .tab_button").forEach(function(btn) {
-                btn.classList.remove("active")
-            })
-
-            document.querySelectorAll(".tab_panel").forEach(function(panel) {
-                panel.classList.remove("active")
-            })
-
-            button.classList.add("active")
-            var panel = document.querySelector(`[data-tab-panel=\"${ tab }\"]`)
-            if (panel) {
-                panel.classList.add("active")
-            }
-        })
-    })
-}
+function product_page_loaded() {}
 
 function open_buy_form(product_id, product_name, product_image, product_price, product_code) {
     document.getElementById("buy-form-window").style.display = "block"
