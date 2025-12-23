@@ -7,38 +7,18 @@
 <button style="display: none" onclick="product_page_loaded()" id="page_loaded_js_function"></button>
 
 
-<div class="block section-block">
+<div class="block">
     <div class="container product_info">
-        <div class="product_heading">
-            <div>
-                <p class="product__eyebrow">Товар из каталога</p>
-                <h1>{{ product.name }}</h1>
-            </div>
-            <div class="product_price">
-                <span>Стоимость</span>
-                <strong>{{ product.price|intcomma }} тг</strong>
-            </div>
-        </div>
+        <h1>{{ product.name }}</h1>
 
-        <div class="more_info product_card">
+        <div class="more_info">
             <div class="product_image" style="background-image: url({{ product.poster }})"></div>
 
             <div class="text">
                 <h2>О товаре</h2>
-                <div class="product_meta">
-                    <div>
-                        <span>Категория</span>
-                        <strong>{{ product.category }}</strong>
-                    </div>
-                    <div>
-                        <span>Код товара</span>
-                        <strong>{{ product.code }}</strong>
-                    </div>
-                    <div>
-                        <span>Бренд</span>
-                        <strong>{{ product.brand }}</strong>
-                    </div>
-                </div>
+                <p><b>Категория:</b> {{ product.category }}</p>
+                <p><b>Код товара:</b> {{ product.code }}</p>
+                <p><b>Бренд:</b> {{ product.brand }}</p>
                 <p class="characteristics_title"><b>Характеристики:</b></p>
 
                 <div class="description" style="margin-top: 5px;">
@@ -48,11 +28,8 @@
                 </div>
 
                 <div class="buy">
-                    <button class="primary_btn" onclick="open_buy_form({{ product.id }}, '{{ product.name }}', '{{ product.poster }}', '{{ product.price }}', '{{ product.code }}')">Купить</button>
-                    <div class="price_tag">
-                        <span>Цена</span>
-                        <strong>{{ product.price|intcomma }} тг</strong>
-                    </div>
+                    <button onclick="open_buy_form({{ product.id }}, '{{ product.name }}', '{{ product.poster }}', '{{ product.price }}', '{{ product.code }}')">Купить</button>
+                    <h2>{{ product.price|intcomma }} тг</h2>
                 </div>
             </div>
         </div>
