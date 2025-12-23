@@ -129,6 +129,26 @@
     width: 220px;
     display: flex;
     flex-direction: column;
+    gap: 4px;
+}
+
+.stat_card h2 {
+    margin: 0;
+    font-size: 24px;
+    font-family: Gilroy-Bold;
+}
+
+.stat_card p {
+    margin: 0;
+    color: #6b6b6b;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.hero__visual {
+    position: relative;
+    min-height: 360px;
+    display: flex;
     align-items: center;
     gap: 6px;
 }
@@ -464,6 +484,7 @@
 
 .partners_info h1 {
     font-family: Gilroy-Bold;
+    margin-bottom: 16px;
 }
 
 .partners_info .partners_list {
@@ -512,7 +533,7 @@
     border-radius: 15px;
     display: flex;
     padding: 20px 0px;
-    margin-top: 60px;
+    margin-top: 30px;
 
     opacity: 0;
     transform: translateY(80%);
@@ -619,6 +640,7 @@
     height: 100%;
     top: 0;
     z-index: 50;
+    backdrop-filter: blur(4px);
 }
 
 #buy-form-window #product_poster {
@@ -632,11 +654,14 @@
 
 #buy-form-window .buy-form-block {
     background: white;
-    width: 50%;
-    margin: 15% auto auto auto;
-    padding: 30px;
+    width: min(620px, 92%);
+    margin: 8% auto auto auto;
+    padding: 32px;
     min-width: fit-content;
     position: relative;
+    border-radius: 20px;
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.2);
+    border: 1px solid #edf4f3;
 }
 
 #buy-form-window h5, h6 {
@@ -653,15 +678,17 @@
     height: 25px;
     padding: 0 5px;
     outline: none;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #dfe9e8;
 }
 
 #buy-form-window form button {
     background: black;
     color: white;
-    width: 175px;
-    height: 27px;
-    margin-top: 25px;
+    width: 100%;
+    height: 44px;
+    margin-top: 8px;
     border: none;
     font-size: 12px;
 }

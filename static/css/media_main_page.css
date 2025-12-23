@@ -254,6 +254,7 @@
 
     .partners_info .partners_list {
         row-gap: 12px;
+        padding: 0 6px;
     }
 
     .main_page_leave_request_container {

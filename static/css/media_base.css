@@ -18,11 +18,13 @@
 	}
 
 	.footer-container {
-		gap: 30px;
+		gap: 24px;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 
 	.footer-container .contacts {
-		width: 70%;
+		width: 100%;
 	}
 
 	.footer-container * {
@@ -30,7 +32,7 @@
 	}
 
 	.footer-container .navigation {
-	    margin-bottom: 70px;
+	    margin-bottom: 30px;
 	}
 
 	.footer-block {
@@ -57,11 +59,15 @@
 	}
 
 	.footer-container {
-	    gap: 15px;
+	    gap: 12px;
+	}
+
+	.footer-container img {
+		width: 200px;
+		height: auto;
 	}
 
 	.footer-container .cities p {
 	    margin-bottom: 15px;
 	}
 }
-
